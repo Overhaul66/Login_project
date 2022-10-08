@@ -1,23 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="col-xxl-6 container-fluid p-5">
   {% if user.is_authenticated %}
-    Welcome {{ user.username }}
-    <button>
-      <a href="{% url 'logout' %}">Log out</a>
-    </button>
+    <p>Welcome
+    <em class="text-info">{{ user.username }}</em>
+    <br/>
+    <br/>
+      <a style="text-decoration:none;" href="{% url 'logout' %}">logout</a>
+      </p>
   {% else %}
-    Welcome guest
+    <p>You are logged in as a 
+    <em class="text-info">guest</em>
+    </p>
     <br/>
-    Sign to be authenticated...
-    <br/>
-    <button>
-      <a href="{% url 'signup' %}">SignUp</a>
-    </button>
+    Sign up 
+    <a href="{% url 'signup' %}" style="text-decoration:none">here</a>
+   <br />
     Already a member?
-    <br/>
-<button>
-      <a href="{% url 'login' %}">Login</a>
-    </button>
+      <a href="{% url 'login' %}" style="text-decoration:none">login here</a>
   {% endif %}
+  </div>
 {% endblock content %}

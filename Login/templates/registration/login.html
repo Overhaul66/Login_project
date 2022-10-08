@@ -1,9 +1,21 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 {% block content %}
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="login"/>
+
+ <div class="p-5 col-xxl-6 container h-100">
+      <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-10 col-md-8 col-lg-6">
+              <!-- Form -->
+<form class="form-example" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+  <input type="submit" class="btn btn-primary btn-customized mt-4" value="login"/>
 </form>
+
+              <!-- Form end -->
+          </div>
+      </div>
+  </div>
+          
+           
 {% endblock content %}

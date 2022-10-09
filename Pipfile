@@ -8,6 +8,7 @@ django = "*"
 tzdata = "*"
 django-crispy-forms = "*"
 crispy-bootstrap5 = "*"
+gunicorn = "*"
 
 [dev-packages]
 

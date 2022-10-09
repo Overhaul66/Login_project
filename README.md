@@ -1,15 +1,13 @@
-# sign up
-
-# Sign up project
+ Sign up project
 # The Software developer roadmap
 
-# frotend bootstrap
-# backend django, Python
+  frotend ---- bootstrap
+  backend ---- django, Python
 
 Features
 ------------
-# login, sign up
-# dynamic webpage
+ login, sign up
+ dynamic webpage
 
 
 Deployed with heroku,
